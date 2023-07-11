@@ -8,10 +8,6 @@ vim.cmd [[packadd packer.nvim]]
 
 packer.startup(function(use)
   use 'wbthomason/packer.nvim'
-  use {
-    'svrana/neosolarized.nvim',
-    requires = { 'tjdevries/colorbuddy.nvim' }
-  }
   use 'nvim-lualine/lualine.nvim' -- Statusline
   use 'nvim-lua/plenary.nvim'     -- Common utilities
   use 'onsails/lspkind-nvim'      -- vscode-like pictograms
@@ -75,4 +71,38 @@ packer.startup(function(use)
 
   -- use latex
   use 'lervag/vimtex'
+
+  -- nord theme
+  use 'shaunsingh/nord.nvim'
+
+  -- markdown headlines
+  use {
+    'lukas-reineke/headlines.nvim',
+    after = 'nvim-treesitter',
+    config = function()
+      require('headlines').setup({
+        markdown = {
+          headline_highlights = {
+            "Headline1",
+            "Headline2",
+            "Headline3",
+            "Headline4",
+            "Headline5",
+            "Headline6",
+          },
+          codeblock_highlight = "CodeBlock",
+          dash_highlight = "Dash",
+          quote_highlight = "Quote",
+        },
+      })
+    end,
+  }
+
+  -- nvim-tree
+  use {
+    'nvim-tree/nvim-tree.lua',
+    requires = {
+      'nvim-tree/nvim-web-devicons', -- optional
+    },
+  }
 end)
