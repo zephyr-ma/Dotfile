@@ -31,6 +31,7 @@ alias vi='nvim'
 alias vim='nvim'
 alias tm='tmux'
 alias gd='cd Google\ Drive/My\ Drive/'
+alias ml='cd /Users/braylon/Library/Mobile\ Documents/com~apple~CloudDocs/000\ Personal\ Storage/002\ University\ Tasks/000\ Xut/000\ Machine-Learning\ Inroduction'
 set DATE (date)
 
 

@@ -4,5 +4,4 @@ if (not status) then return end
 nord.set({
 })
 
-
-vim.cmd [[colorscheme nord]]
+-- vim.cmd [[colorscheme nord]]

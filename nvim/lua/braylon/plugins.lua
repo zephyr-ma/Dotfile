@@ -73,7 +73,7 @@ packer.startup(function(use)
   use 'lervag/vimtex'
 
   -- nord theme
-  use 'shaunsingh/nord.nvim'
+  -- use 'shaunsingh/nord.nvim'
 
   -- markdown headlines
   use {
@@ -104,5 +104,11 @@ packer.startup(function(use)
     requires = {
       'nvim-tree/nvim-web-devicons', -- optional
     },
+  }
+
+  -- neosolarized theme
+  use {
+    'svrana/neosolarized.nvim',
+    requires = { 'tjdevries/colorbuddy.nvim' }
   }
 end)

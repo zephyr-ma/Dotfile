@@ -4,7 +4,8 @@ if (not status) then return end
 ts.setup {
   highlight = {
     enable = true,
-    disable = {},
+    disable = { "latex" },
+    additional_vim_regex_highlighting = { "latex", "markdown" },
   },
   indent = {
     enable = true,
